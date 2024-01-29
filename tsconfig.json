@@ -1,13 +1,20 @@
 {
-    "compilerOptions": {
-      "target": "ES2015",
-      "module": "ES2020",
-      "strict": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "outDir": "./dist"
-    },
-    "include": [
-      "./src"
-    ]
-  }
+  "compilerOptions": {
+    "strict": true,
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./dist/esm"
+  },
+  "include": [
+    "./src",
+    "./src/types",
+    "./lib"
+  ],
+  "exclude": ["./node_modules", "./dist"]
+}
