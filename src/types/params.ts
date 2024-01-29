@@ -1,3 +1,7 @@
 export type Params = {
-  [_key: string]: string | number | boolean | null
+  language?: string
+  model: string
+  file: string
+  use_gpu?: boolean
+  [key: string]: string | boolean | null | undefined
 }

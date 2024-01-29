@@ -1,2 +1,4 @@
 import { Transcript } from './transcript'
-export type Whisper = () => Promise<Transcript>
+import { Params } from './params'
+
+export type Whisper = (args: Params) => Promise<Transcript>
