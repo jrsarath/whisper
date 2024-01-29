@@ -1,8 +1,11 @@
 import path from 'path'
+import url from 'url'
 import { promisify } from 'util'
 import { Params, Transcript, Whisper } from './types'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { Whisper: WhisperCTX } = require(path.resolve('./lib/whisper.node'))
+const { Whisper: WhisperCTX } = require(
+  url.fileURLToPath(new URL('../lib/whisper.node', import.meta.url))
+)
 
 const whisperInstance = promisify(WhisperCTX)
 const defaultParams: Params = {

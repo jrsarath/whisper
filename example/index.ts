@@ -1,3 +1,6 @@
-import whisper from '../dist/esm'
+import whisper from '../dist'
 
-whisper().then((r) => console.log(r))
+whisper({
+  model: '/Users/sarath/Documents/GitHub/Aura/models/whisper-medium.bin',
+  file: '/Users/sarath/Documents/GitHub/Aura/src/sports2.wav',
+}).then((r) => console.log(r))
