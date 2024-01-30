@@ -1,4 +1,4 @@
 import whisper from './whisper'
 
 export default whisper
-export * from './types/index.js'
+export type * from './types/index.js'
