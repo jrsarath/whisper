@@ -23,7 +23,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cp-types": "mkdir -p ./dist/types && cp -r ./src/types/* ./dist/types",
     "build": "rm -rf dist && npm run tsc && npm run cp-types",
-    "build-addon": "cd whisper.cpp/examples/addon.node && npm run build",
     "tsc": "tsc -p tsconfig.json",
     "prepublishOnly": "npm run build",
     "postinstall": "node ./scripts/post_install.js"
