@@ -25,7 +25,8 @@
     "build": "rm -rf dist && npm run tsc && npm run cp-types",
     "build-addon": "cd whisper.cpp/examples/addon.node && npm run build",
     "tsc": "tsc -p tsconfig.json",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postinstall": "node ./scripts/post_install.js"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.4.0",
@@ -44,5 +45,8 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "access": "public"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.5"
   }
 }

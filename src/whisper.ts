@@ -1,6 +1,7 @@
 import path from 'path'
 import { promisify } from 'util'
 import { Params, Transcript, Whisper } from './types'
+
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { Whisper: WhisperCTX } = require(
   path.join(__dirname, '../lib/whisper.cpp/build/Release/whisper-addon.node')
