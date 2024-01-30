@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const path_1 = __importDefault(require("path"));
 const util_1 = require("util");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { Whisper: WhisperCTX } = require(path_1.default.join(__dirname, '../lib/whisper.node'));
+const { Whisper: WhisperCTX } = require(path_1.default.join(__dirname, '../lib/whisper.cpp/build/Release/whisper-addon.node'));
 const whisperInstance = (0, util_1.promisify)(WhisperCTX);
 const defaultParams = {
     language: 'en',
