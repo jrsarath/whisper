@@ -12,6 +12,7 @@ const defaultParams: Params = {
   model: path.join(__dirname, '../lib/whisper-tiny.bin'),
   file: path.join(__dirname, '../lib/a13.wav'),
   use_gpu: true,
+  debug: false,
 }
 
 const whisper: Whisper = (args: Params) => {

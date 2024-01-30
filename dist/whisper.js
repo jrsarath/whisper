@@ -13,6 +13,7 @@ const defaultParams = {
     model: path_1.default.join(__dirname, '../lib/whisper-tiny.bin'),
     file: path_1.default.join(__dirname, '../lib/a13.wav'),
     use_gpu: true,
+    debug: false,
 };
 const whisper = (args) => {
     // eslint-disable-next-line no-async-promise-executor

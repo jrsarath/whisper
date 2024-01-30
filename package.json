@@ -1,6 +1,6 @@
 {
   "name": "@jrsarath/whisper",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "A wrapper for OpenAI's whisper model's node addon based on C++ porting by @ggerganov",
   "license": "MIT",
   "repository": {
@@ -23,6 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cp-types": "mkdir -p ./dist/types && cp -r ./src/types/* ./dist/types",
     "build": "rm -rf dist && npm run tsc && npm run cp-types",
+    "build-addon": "cd whisper.cpp/examples/addon.node && npm run build",
     "tsc": "tsc -p tsconfig.json",
     "prepublishOnly": "npm run build"
   },
