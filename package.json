@@ -1,7 +1,9 @@
 {
   "name": "@jrsarath/whisper",
-  "version": "1.0.7",
   "description": "A wrapper for OpenAI's whisper model's node addon based on C++ porting by @ggerganov",
+  "version": "1.0.8",
+  "main": "./dist/index.js",
+  "type": "module",
   "author": {
     "name": "Sarath \"Delta\" Singh",
     "email": "jrsarath@outlook.com",
@@ -12,19 +14,18 @@
     "type": "git",
     "url": "git+https://github.com/jrsarath/whisper.git"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/types",
   "files": [
     "./lib",
     "./dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "cp-types": "mkdir -p ./dist/types && cp -r ./src/types/* ./dist/types",
+    "build": "rm -rf dist && npm run tsc",
     "tsc": "tsc -p tsconfig.json",
-    "prepublishOnly": "rm -rf dist && npm run tsc"
+    "prepublishOnly": "npm run build"
   },
-  "_publishConfig": {
+  "publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "access": "public"
   },

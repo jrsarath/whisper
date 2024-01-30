@@ -1,5 +1,4 @@
-import path from 'path'
-import url from 'url'
+import * as url from 'url'
 import { promisify } from 'util'
 import { Params, Transcript, Whisper } from './types'
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -10,8 +9,8 @@ const { Whisper: WhisperCTX } = require(
 const whisperInstance = promisify(WhisperCTX)
 const defaultParams: Params = {
   language: 'en',
-  model: path.resolve('./lib/whisper-tiny.bin'),
-  file: path.resolve('./lib/a13.wav'),
+  model: url.fileURLToPath(new URL('../lib/whisper-tiny.bin', import.meta.url)),
+  file: url.fileURLToPath(new URL('../lib/a13.wav', import.meta.url)),
   use_gpu: true,
 }
 
