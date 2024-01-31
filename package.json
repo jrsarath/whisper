@@ -1,6 +1,6 @@
 {
   "name": "@jrsarath/whisper",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "A wrapper for OpenAI's whisper model's node addon based on C++ porting by @ggerganov",
   "license": "MIT",
   "repository": {
@@ -16,14 +16,15 @@
   "types": "./dist/index.d.ts",
   "files": [
     "./lib",
-    "./dist"
+    "./dist",
+    "./scripts"
   ],
   "scripts": {
     "start": "node --loader ts-node/esm ./src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "cp-types": "mkdir -p ./dist/types && cp -r ./src/types/* ./dist/types",
     "build": "rm -rf dist && npm run tsc && npm run cp-types",
-    "tsc": "tsc -p tsconfig.json",
+    "tsc": "npx tsc -p tsconfig.json",
     "prepublishOnly": "npm run build",
     "postinstall": "node ./scripts/post_install.js"
   },
@@ -41,7 +42,7 @@
     "ts-node": "^10.9.2",
     "typescript": "*"
   },
-  "publishConfig": {
+  "_publishConfig": {
     "registry": "https://npm.pkg.github.com",
     "access": "public"
   },

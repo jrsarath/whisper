@@ -12,7 +12,7 @@
     "declarationMap": false,
     "rootDir": "src",
     "baseUrl": "src",
-    "outDir": "dist",
+    "outDir": "dist"
   },
   "include": [
     "src",
